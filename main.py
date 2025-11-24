@@ -12,7 +12,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 
 # --- CONFIGURAZIONE E CHIAVI (Recuperate dalle variabili d'ambiente di GitHub Actions) ---
 
-TEAMS_WEBHOOK_URL = os.environ.get("https://portalasystel.webhook.office.com/webhookb2/65c8f3a6-7767-4313-b5aa-c6573ee7dbc6@e2b07a20-f98b-474c-8346-2773e5180bf3/IncomingWebhook/cdec464320824c5f96f883ed1dab0422/c798797e-ed80-4b40-b1ff-04ebc6fd4366/V2ZBOjbuawokt1TLjC13p0YoyU3uAwFR-EWzZsrpjgmf01")
+TEAMS_WEBHOOK_URL = os.environ.get("TEAMS_WEBHOOK_URL")
 GEMINI_API_KEY = os.environ.get("AIzaSyB2NfAuRmIUO537an1MKcGCMtqcNzDJ5Ew")
 
 if GEMINI_API_KEY:
