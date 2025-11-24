@@ -13,7 +13,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 # --- CONFIGURAZIONE E CHIAVI (Recuperate dalle variabili d'ambiente di GitHub Actions) ---
 
 TEAMS_WEBHOOK_URL = os.environ.get("TEAMS_WEBHOOK_URL")
-GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
+GEMINI_API_KEY = os.environ.get("AIzaSyB2NfAuRmIUO537an1MKcGCMtqcNzDJ5Ew")
 
 if GEMINI_API_KEY:
     try:
