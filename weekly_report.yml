@@ -1,11 +1,8 @@
 name: Weekly Security Report Bot
 
-# Definisce il trigger per l'esecuzione
 on:
-  # Esecuzione programmata: ogni Lunedì alle 08:00 UTC (10:00 AM CET/CEST)
   schedule:
     - cron: '0 8 * * 1'
-  # Permette l'esecuzione manuale dalla UI di GitHub per i test
   workflow_dispatch:
 
 jobs:
@@ -19,7 +16,7 @@ jobs:
       - name: Set up Python Environment
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x' # Usa la versione Python più recente
+          python-version: '3.x'
           
       - name: Install dependencies from requirements.txt
         run: |
@@ -27,7 +24,6 @@ jobs:
           pip install -r requirements.txt
           
       - name: Run Weekly Report Script
-        # Passa i Segreti di GitHub come variabili d'ambiente allo script Python
         env:
           TEAMS_WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
